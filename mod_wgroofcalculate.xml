@@ -1,42 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" version="2.5" client="site" method="upgrade">
-    <name>mod_example</name>
-    <author>Asika</author>
-    <creationDate>2012-11-12</creationDate>
-    <copyright>Copyright (C) 2012 Asikart.com</copyright>
+    <name>mod_wgroofcalculate</name>
+    <author>Lauro Guedes</author>
+    <creationDate>2016-02-03</creationDate>
+    <copyright>Copyright (C) 2016 - Leowgweb</copyright>
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-    <authorEmail>asika@asikart.com</authorEmail>
-    <authorUrl>http://asikart.com</authorUrl>
+    <authorEmail>leowgweb@gmail.com</authorEmail>
+    <authorUrl>http://leowgweb.com</authorUrl>
     <version>1.0</version>
     <description>MOD_EXAMPLE_INSTALL_DESC</description>
     
-    
-    <scriptfile>install.php</scriptfile>
-    
-    <!-- module example now has no sql file
-    <install>
-        <sql>
-            <file driver="mysql" charset="utf8">sql/install.sql</file>
-          </sql>
-    </install>
-    
-    
-    <uninstall>
-        <sql>
-            <file driver="mysql" charset="utf8">sql/uninstall.sql</file>
-          </sql>
-    </uninstall>
-    -->
-    
-    
     <files>
-        <filename module="mod_example">mod_example.php</filename>
+        <filename module="mod_wgroofcalculate">mod_wgroofcalculate.php</filename>
         <folder>tmpl</folder>
         <folder>language</folder>
         <filename>index.html</filename>
-        <filename>mod_example.xml</filename>
+        <filename>mod_wgroofcalculate.xml</filename>
         <filename>helper.php</filename>
-        <filename>install.php</filename>
     </files>
     
     
