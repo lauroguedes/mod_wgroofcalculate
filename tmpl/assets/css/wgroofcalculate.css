@@ -1,0 +1,17 @@
+/**
+ * @package     mod_wgroofcalculate - WG Roof Calculate
+ * @version     1.0
+ * @created     Fev 2016
+ *
+ * @author      Lauro W. Guedes
+ * @email       leowgweb@gmail.com
+ * @website     http://leowgweb.com
+ * @support     Suporte - http://leowgweb.com/contato
+ * @copyright   Copyright (C) 2015 Lauro W. Guedes. Todos os Direitos Reservados.
+ * @license     http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ *
+ */
+
+.wg-modroofcalculate .wg-preloading{
+    display: none;
+}

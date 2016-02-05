@@ -9,9 +9,14 @@
 // no direct access
 defined('_JEXEC') or die;
 
+// classes controladores de conflito
+$wgSendData = 'wgSendData'.$module->id;
+$wgIdContent = 'wgIdContent'.$module->id;
+
 ?>
-<div class="wg-modroofcalculate <?php echo $moduleclass_sfx; ?>">
-    <form id="wgSendData" action="#" method="post">
+<div class="wg-modroofcalculate <?php echo $moduleclass_sfx; ?>" id="<?php echo $wgIdContent; ?>">
+    <div class="wg-preloading">Carregando...</div>
+    <form id="<?php echo $wgSendData; ?>" method="post" class="form-wgroofcalculate">
         <div class="form-group">
             <label for="areasize">Entre com a área a ser coberta em m²: </label>
             <input type="text" name="areasize" class="form-control" id="areasize">
@@ -24,7 +29,7 @@ defined('_JEXEC') or die;
             <label for="rooftype">Modelo da Telha</label>
             <select name="rooftype" id="rooftype" class="form-control">
                 <?php foreach($typesofroofs as $option) : ?>
-                    <option value="<?php echo $option[1] ?>"><?php echo $option[0]; ?></option>
+                    <option value="<?php echo $option ?>"><?php echo $option[0]; ?></option>
                 <?php endforeach; ?>
             </select>
         </div>
@@ -34,3 +39,7 @@ defined('_JEXEC') or die;
         <p class="alert alert-success">Teste</p>
     </div>
 </div>
+
+<script>
+    wgModRequestAjax.getId("<?php echo $wgSendData; ?>", "<?php echo $wgIdContent; ?>");
+</script>
