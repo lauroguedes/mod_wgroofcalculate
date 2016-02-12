@@ -36,9 +36,10 @@ var wgModRequestAjax = (function ($) {
                     type: 'POST',
                     data: request,
                     beforeSend: startPreloading(wgidcont)
-                }).done(function(resposta){
+                }).done(function(data){
+                    var response = JSON.parse(data);
                     endPreloading(wgidcont);
-                    $(wgidcont+".response-calculate .alert").fadeIn().html(resposta);
+                    $(wgidcont+".response-calculate .alert").fadeIn().html('Total de Telhas aproximado: <strong>'+response.totalRoof+'</strong>, Peso Total de Telhas: <strong>'+response.totalWeight+'kg</strong>');
                 }).fail(function(){
                     endPreloading(wgidcont);
                     $(wgidcont+".response-calculate .alert").fadeIn().text('Falha ao calcular Telha. Confira sua conexão!').delay(5000).fadeOut(500);

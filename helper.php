@@ -93,11 +93,11 @@ abstract class modWGRoofCalculateHelper
 
         $valuesToCaculate = modWGRoofCalculateHelper::dismemberValue($rooftype);
 
-        $roofCalculate = ($areasize * $correctfactor * $valuesToCaculate[1]);
-        $roofCalculatePercent = round(($roofCalculate * $percent)/100);
-        $roofCalculate = $roofCalculate + $roofCalculatePercent;
+        $roofCalculate = $areasize * $correctfactor * $valuesToCaculate[1];
+        $roofCalculateTotal = round($roofCalculate + (($roofCalculate * $percent)/100));
+        $roofCalculateResult = ['totalRoof' => $roofCalculateTotal, 'totalWeight' => ($roofCalculateTotal * $valuesToCaculate[0])];
 
-        return $roofCalculate;
+        return json_encode($roofCalculateResult);
     }
 
     /**
