@@ -39,23 +39,31 @@ var wgModRequestAjax = (function ($) {
                 }).done(function(data){
                     var response = JSON.parse(data);
                     endPreloading(wgidcont);
-                    $(wgidcont+".response-calculate .alert").fadeIn().html('Total de Telhas aproximado: <strong>'+response.totalRoof+'</strong>, Peso Total de Telhas: <strong>'+response.totalWeight+'kg</strong>');
+                    $(wgidcont+".wg-roof-response-content").fadeIn();
+                    $(wgidcont+".wg-roof-response").html('<p class="success">Total de Telhas aproximado: <strong>'+response.totalRoof+'</strong><br>Peso Total de Telhas: <strong>'+response.totalWeight+'kg</strong></p>');
                 }).fail(function(){
                     endPreloading(wgidcont);
-                    $(wgidcont+".response-calculate .alert").fadeIn().text('Falha ao calcular Telha. Confira sua conexão!').delay(5000).fadeOut(500);
+                    $(wgidcont+".wg-roof-response-content").fadeIn();
+                    $(wgidcont+".wg-roof-response").html('<p class="error">Falha ao calcular Telha. Confira sua conexão!</p>').delay(5000).fadeOut(500);
                 });
             });
-        })
+
+            //Fecha as resposta do módulo
+            $(wgidcont+"#close-response").on('click', function(){
+                $(wgidcont+".wg-roof-response-content").fadeOut();
+            });
+
+        });
     }
 
     function startPreloading(wgidcont){
-        $(wgidcont+'.wg-preloading').fadeIn().css('display','block');
-        $(wgidcont+".btn").attr("disabled",true);
+        $(wgidcont+'.wg-roof-loading-content').fadeIn();
+        $(wgidcont+".wg-roof-button").attr("disabled",true);
     }
     function endPreloading(wgidcont){
-        $(wgidcont+".wg-preloading").fadeOut().css('display','none');
-        $(wgidcont+".btn").attr("disabled",false);
-        $(wgidcont+".form-control").val("");
+        $(wgidcont+".wg-roof-loading-content").fadeOut();
+        $(wgidcont+".wg-roof-button").attr("disabled",false);
+        $(wgidcont+".wg-roof-input").val("");
     }
 
     // retorno da função

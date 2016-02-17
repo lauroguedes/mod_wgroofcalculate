@@ -48,6 +48,14 @@ abstract class modWGRoofCalculateHelper
         }else{
             $doc->addStyleSheet(JURI::base().'modules/mod_wgroofcalculate/tmpl/assets/css/wgroofcalculate.css');
         }
+
+        if(file_exists(JPATH_BASE.'/templates/'.$template.'/html/mod_wgroofcalculate/assets/image/loading.gif')){
+            $pathimage = JURI::base().'templates/'.$template.'/html/mod_wgroofcalculate/assets/image/loading.gif';
+        }else{
+            $pathimage = JURI::base().'modules/mod_wgroofcalculate/tmpl/assets/image/loading.gif';
+        }
+
+        return $pathimage;
     }
 
     /**

@@ -14,8 +14,12 @@ require_once dirname(__FILE__) . '/helper.php';
 
 $typesofroofs       = modWGRoofCalculateHelper::getTypeRoof($params);
 $moduleclass_sfx    = htmlspecialchars($params->get('moduleclass_sfx'));
+$formsize           = $params->get('formsize');
+$formalign          = $params->get('formalign');
+$fieldalign         = $params->get('fieldalign');
+$fieldposition      = $params->get('fieldposition');
 
 // declarando dependências
-modWGRoofCalculateHelper::pullDependecies();
+$pathimage = modWGRoofCalculateHelper::pullDependecies();
 
 require JModuleHelper::getLayoutPath('mod_wgroofcalculate', $params->get('layout', 'default'));

@@ -14,16 +14,24 @@ $wgSendData = 'wgSendData'.$module->id;
 $wgIdContent = 'wgIdContent'.$module->id;
 
 ?>
-<div class="wg-modroofcalculate <?php echo $moduleclass_sfx; ?>" id="<?php echo $wgIdContent; ?>">
-    <div class="wg-preloading">Carregando...</div>
-    <form id="<?php echo $wgSendData; ?>" method="post" class="form-wgroofcalculate">
-        <div class="form-group">
-            <label for="areasize">Entre com a área a ser coberta em m²: </label>
-            <input type="text" name="areasize" class="form-control" id="areasize">
+<div class="wg-roof-content <?php echo $formalign; ?> <?php echo $moduleclass_sfx; ?>" id="<?php echo $wgIdContent; ?>">
+    <form id="<?php echo $wgSendData; ?>" method="post" class="wg-roof-form <?php echo $fieldalign; ?> <?php echo $fieldposition; ?>" style="width: <?php echo $formsize; ?>%">
+        <div class="wg-roof-response-content">
+            <i id="close-response" class="icon-remove"></i>
+            <div class="wg-roof-response"></div>
         </div>
-        <div class="form-group">
-            <label for="correctfactor">Fator de Correção(%)</label>
-            <select name="correctfactor" id="correctfactor" class="form-control">
+        <div class="wg-roof-loading-content">
+            <div class="wg-roof-loading">
+                <img src="<?php echo $pathimage; ?>" alt="Carregando..." />
+            </div>
+        </div>
+        <div class="wg-roof-fields">
+            <label class="wg-roof-label" for="areasize">Entre com a área a ser coberta em m²: </label>
+            <input type="text" name="areasize" class="wg-roof-input" id="areasize">
+        </div>
+        <div class="wg-roof-fields">
+            <label class="wg-roof-label" for="correctfactor">Fator de Correção(%)</label>
+            <select name="correctfactor" id="correctfactor" class="wg-roof-input">
                 <option value="" disabled selected>% - Ângulo - Fator Correção</option>
                 <option value="1.044">30% - 16°42' - 1,044</option>
                 <option value="1.047">31% - 17°13' - 1,047</option>
@@ -50,19 +58,16 @@ $wgIdContent = 'wgIdContent'.$module->id;
                 <option value="1.127">52% - 27°28' - 1,127</option>
             </select>
         </div>
-        <div class="form-group">
-            <label for="rooftype">Modelo da Telha</label>
-            <select name="rooftype" id="rooftype" class="form-control">
+        <div class="wg-roof-fields">
+            <label class="wg-roof-label" for="rooftype">Modelo da Telha</label>
+            <select name="rooftype" id="rooftype" class="wg-roof-input">
                 <?php foreach($typesofroofs as $option) : ?>
                     <option value="<?php echo $option[1].'|'.$option[2] ?>"><?php echo $option[0]; ?></option>
                 <?php endforeach; ?>
             </select>
         </div>
-        <button type="submit" class="btn btn-default">Calcular</button>
+        <button type="submit" class="wg-roof-button">Calcular</button>
     </form>
-    <div class="response-calculate">
-        <p class="alert alert-success">Teste</p>
-    </div>
 </div>
 
 <script>

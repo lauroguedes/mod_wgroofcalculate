@@ -50,6 +50,32 @@
                 
             </fieldset>
 
+            <fieldset name="layout">
+                <field
+                        name="formsize"
+                        type="text"
+                        default="100"
+                        label="Tamanho do Formulário(%)"
+                        description="Insira o valor em porcentagem do tamanho do campo."
+                />
+                <field name="formalign" type="list" default="left" label="Alinhamento do Formulário" description="Selecione o alinhamento do formulário">
+                    <option value="left">Esquerda</option>
+                    <option value="center">Centro</option>
+                    <option value="right">Direita</option>
+                </field>
+                <field name="fieldalign" type="list" default="left" label="Alinhamento dos Campos" description="Selecione o alinhamento dos campos">
+                    <option value="left">Esquerda</option>
+                    <option value="center">Centro</option>
+                    <option value="right">Direita</option>
+                    <option value="between">Centro Espaçado</option>
+                    <option value="around">Centro Compactado</option>
+                </field>
+                <field name="fieldposition" type="list" default="vertical" label="Posição dos Campos" description="Selecione o posicionamento dos campos">
+                    <option value="vertical">Vertical</option>
+                    <option value="horizontal">Horizontal</option>
+                </field>
+            </fieldset>
+
             <fieldset name="advanced">
 
                 <field
