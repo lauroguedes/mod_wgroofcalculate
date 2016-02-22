@@ -37,10 +37,17 @@ var wgModRequestAjax = (function ($) {
                     data: request,
                     beforeSend: startPreloading(wgidcont)
                 }).done(function(data){
-                    var response = JSON.parse(data);
                     endPreloading(wgidcont);
+                    if (data.response == 0){
+                        $(wgidcont+".wg-roof-response").html('<p class="error">'+data.msn+'</p>');
+                    }else if(data.response == 1){
+                        $(wgidcont+".wg-roof-response").html('<p class="error">'+data.msn+'</p>');
+                    }else{
+                        var response = JSON.parse(data);
+                        $(wgidcont+".wg-roof-response").html('<p class="success">'+data.msn+'</p>');
+                        $(wgidcont+".wg-roof-input").val("");
+                    }
                     $(wgidcont+".wg-roof-response-content").fadeIn();
-                    $(wgidcont+".wg-roof-response").html('<p class="success">Total de Telhas aproximado: <strong>'+response.totalRoof+'</strong><br>Peso Total de Telhas: <strong>'+response.totalWeight+'kg</strong></p>');
                 }).fail(function(){
                     endPreloading(wgidcont);
                     $(wgidcont+".wg-roof-response-content").fadeIn();
@@ -63,7 +70,6 @@ var wgModRequestAjax = (function ($) {
     function endPreloading(wgidcont){
         $(wgidcont+".wg-roof-loading-content").fadeOut();
         $(wgidcont+".wg-roof-button").attr("disabled",false);
-        $(wgidcont+".wg-roof-input").val("");
     }
 
     // retorno da função

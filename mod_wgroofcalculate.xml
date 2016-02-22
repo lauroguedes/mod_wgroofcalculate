@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" version="2.5" client="site" method="upgrade">
-    <name>mod_wgroofcalculate</name>
+    <name>WG Roof Calculate</name>
     <author>Lauro Guedes</author>
     <creationDate>2016-02-03</creationDate>
     <copyright>Copyright (C) 2016 - Leowgweb</copyright>
@@ -8,7 +8,22 @@
     <authorEmail>leowgweb@gmail.com</authorEmail>
     <authorUrl>http://leowgweb.com</authorUrl>
     <version>1.0</version>
-    <description>MOD_EXAMPLE_INSTALL_DESC</description>
+    <description>
+        <![CDATA[
+                <p>Módulo que faz o cálculo aproximado de telhas e seu peso total baseado na área, fator de correção e tipo/modelo da telha.</p>
+                <p>Versão <strong>1.0</strong></p>
+                <p><strong>Implementações</strong></p>
+                <ul>
+                    <li>Cadastro dos tipos de telha</li>
+                    <li>2 tipos de layout</li>
+                    <li>5 Tipos de alinhamento horizontal</li>
+                    <li>E muito mais...</li>
+                </ul>
+                <p>Desenvolvido por Lauro W. Guedes</p>
+                <p>GitHub: <a target="_blank" href="https://github.com/lauroguedes/">@lauroguedes</a></p>
+                <p>leo-ti@hotmail.com / leowgweb@gmail.com <br/><a href="http://leowgweb.com.br">www.leowgweb.com.br</a><br/></p>
+        ]]>
+    </description>
     
     <files>
         <filename module="mod_wgroofcalculate">mod_wgroofcalculate.php</filename>
@@ -27,14 +42,14 @@
         
         <fields name="params">
             
-            <fieldset name="basic">
+            <fieldset name="config" label="MOD_WGROOFCALCULATE_MODULE_TAB_CONFIG">
 
                 <field
                     name="typesofroof"
                     type="textarea"
                     default=""
-                    label="Tipos de Telha"
-                    description="Entre com cada telha em um linha colocando o nome, o peso e o rendimento: Ex: Portuguesa|2.50|16"
+                    label="MOD_WGROOFCALCULATE_MODULE_LABEL_TYPEROOF"
+                    description="MOD_WGROOFCALCULATE_MODULE_DESC_TYPEROOF"
                     rows="10"
                     cols="5"
                 />
@@ -43,40 +58,40 @@
                     name="increase"
                     type="text"
                     default="10"
-                    label="Acréscimo(%)"
-                    description="Insira o valor em porcentagem a acrescentar de perdas e recortes."
+                    label="MOD_WGROOFCALCULATE_MODULE_LABEL_INCREASE"
+                    description="MOD_WGROOFCALCULATE_MODULE_DESC_INCREASE"
                     size="10"
                 />
                 
             </fieldset>
 
-            <fieldset name="layout">
+            <fieldset name="layout" label="MOD_WGROOFCALCULATE_MODULE_TAB_LAYOUT">
                 <field
                         name="formsize"
                         type="text"
                         default="100"
-                        label="Tamanho do Formulário(%)"
-                        description="Insira o valor em porcentagem do tamanho do campo."
+                        label="MOD_WGROOFCALCULATE_MODULE_LABEL_FORMSIZE"
+                        description="MOD_WGROOFCALCULATE_MODULE_DESC_FORMSIZE"
                 />
-                <field name="formalign" type="list" default="left" label="Alinhamento do Formulário" description="Selecione o alinhamento do formulário">
-                    <option value="left">Esquerda</option>
-                    <option value="center">Centro</option>
-                    <option value="right">Direita</option>
+                <field name="formalign" type="list" default="left" label="MOD_WGROOFCALCULATE_MODULE_LABEL_FORMALIGN" description="MOD_WGROOFCALCULATE_MODULE_DESC_FORMALIGN">
+                    <option value="left">MOD_WGROOFCALCULATE_MODULE_SELECT_LEFT</option>
+                    <option value="center">MOD_WGROOFCALCULATE_MODULE_SELECT_CENTER</option>
+                    <option value="right">MOD_WGROOFCALCULATE_MODULE_SELECT_RIGHT</option>
                 </field>
-                <field name="fieldalign" type="list" default="left" label="Alinhamento dos Campos" description="Selecione o alinhamento dos campos">
-                    <option value="left">Esquerda</option>
-                    <option value="center">Centro</option>
-                    <option value="right">Direita</option>
-                    <option value="between">Centro Espaçado</option>
-                    <option value="around">Centro Compactado</option>
+                <field name="fieldalign" type="list" default="left" label="MOD_WGROOFCALCULATE_MODULE_LABEL_FIELDALIGN" description="MOD_WGROOFCALCULATE_MODULE_DESC_FIELDALIGN">
+                    <option value="left">MOD_WGROOFCALCULATE_MODULE_SELECT_LEFT</option>
+                    <option value="center">MOD_WGROOFCALCULATE_MODULE_SELECT_CENTER</option>
+                    <option value="right">MOD_WGROOFCALCULATE_MODULE_SELECT_RIGHT</option>
+                    <option value="between">MOD_WGROOFCALCULATE_MODULE_SELECT_FIELDALIGN_CENTERSPACE</option>
+                    <option value="around">MOD_WGROOFCALCULATE_MODULE_SELECT_FIELDALIGN_CENTERCOMPACT</option>
                 </field>
-                <field name="fieldposition" type="list" default="vertical" label="Posição dos Campos" description="Selecione o posicionamento dos campos">
-                    <option value="vertical">Vertical</option>
-                    <option value="horizontal">Horizontal</option>
+                <field name="fieldposition" type="list" default="vertical" label="MOD_WGROOFCALCULATE_MODULE_LABEL_FIELDPOSITION" description="MOD_WGROOFCALCULATE_MODULE_DESC_FIELDPOSITION">
+                    <option value="vertical">MOD_WGROOFCALCULATE_MODULE_SELECT_FIELDPOSITION_V</option>
+                    <option value="horizontal">MOD_WGROOFCALCULATE_MODULE_SELECT_FIELDPOSITION_H</option>
                 </field>
             </fieldset>
 
-            <fieldset name="advanced">
+            <fieldset name="advanced" label="MOD_WGROOFCALCULATE_MODULE_TAB_ADVANCED">
 
                 <field
                         name="moduleclass_sfx"

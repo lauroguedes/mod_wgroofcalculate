@@ -26,13 +26,13 @@ $wgIdContent = 'wgIdContent'.$module->id;
             </div>
         </div>
         <div class="wg-roof-fields">
-            <label class="wg-roof-label" for="areasize">Entre com a área a ser coberta em m²: </label>
+            <label class="wg-roof-label" for="areasize"> <?php echo JText::_('MOD_WGROOFCALCULATE_LABEL_AREA'); ?> </label>
             <input type="text" name="areasize" class="wg-roof-input" id="areasize">
         </div>
         <div class="wg-roof-fields">
-            <label class="wg-roof-label" for="correctfactor">Fator de Correção(%)</label>
+            <label class="wg-roof-label" for="correctfactor"><?php echo JText::_('MOD_WGROOFCALCULATE_LABEL_FACTOR'); ?></label>
             <select name="correctfactor" id="correctfactor" class="wg-roof-input">
-                <option value="" disabled selected>% - Ângulo - Fator Correção</option>
+                <option value="" disabled selected><?php echo JText::_('MOD_WGROOFCALCULATE_LABEL_FACTOR_OPTION'); ?></option>
                 <option value="1.044">30% - 16°42' - 1,044</option>
                 <option value="1.047">31% - 17°13' - 1,047</option>
                 <option value="1.050">32% - 17°44' - 1,050</option>
@@ -59,14 +59,15 @@ $wgIdContent = 'wgIdContent'.$module->id;
             </select>
         </div>
         <div class="wg-roof-fields">
-            <label class="wg-roof-label" for="rooftype">Modelo da Telha</label>
+            <label class="wg-roof-label" for="rooftype"><?php echo JText::_('MOD_WGROOFCALCULATE_LABEL_ROOFTYPE'); ?></label>
             <select name="rooftype" id="rooftype" class="wg-roof-input">
+                <option value="" disabled selected><?php echo JText::_('MOD_WGROOFCALCULATE_LABEL_ROOFTYPE_OPTION'); ?></option>
                 <?php foreach($typesofroofs as $option) : ?>
                     <option value="<?php echo $option[1].'|'.$option[2] ?>"><?php echo $option[0]; ?></option>
                 <?php endforeach; ?>
             </select>
         </div>
-        <button type="submit" class="wg-roof-button">Calcular</button>
+        <button type="submit" class="wg-roof-button"><?php echo JText::_('MOD_WGROOFCALCULATE_BUTTON_CALC'); ?></button>
     </form>
 </div>
 

@@ -99,13 +99,30 @@ abstract class modWGRoofCalculateHelper
             }
         }
 
-        $valuesToCaculate = modWGRoofCalculateHelper::dismemberValue($rooftype);
+        //valida dados
+        if (empty($areasize) || empty($correctfactor) || empty($rooftype)){
 
-        $roofCalculate = $areasize * $correctfactor * $valuesToCaculate[1];
-        $roofCalculateTotal = round($roofCalculate + (($roofCalculate * $percent)/100));
-        $roofCalculateResult = ['totalRoof' => $roofCalculateTotal, 'totalWeight' => ($roofCalculateTotal * $valuesToCaculate[0])];
+            $data = ['response' => 0, 'msn' => JText::_('MOD_WGROOFCALCULATE_MSN_ERRO1')];
 
-        return json_encode($roofCalculateResult);
+            return json_encode($data);
+        }else{
+
+            if (!is_numeric($areasize)){
+                $data = ['response' => 1, 'msn' => JText::_('MOD_WGROOFCALCULATE_MSN_ERRO2')];
+
+                return json_encode($data);
+            }else{
+                $valuesToCaculate = modWGRoofCalculateHelper::dismemberValue($rooftype);
+
+                $roofCalculate = $areasize * $correctfactor * $valuesToCaculate[1];
+                $roofCalculateTotal = round($roofCalculate + (($roofCalculate * $percent)/100));
+                $roofCalculateResult = ['totalRoof' => $roofCalculateTotal, 'totalWeight' => ($roofCalculateTotal * $valuesToCaculate[0])];
+
+                $data = ['response' => 2, 'msn' => JText::sprintf('MOD_WGROOFCALCULATE_MSN_RESPONSE', $roofCalculateResult['totalRoof'], $roofCalculateResult['totalWeight'])];
+
+                return json_encode($data);
+            }
+        }
     }
 
     /**
