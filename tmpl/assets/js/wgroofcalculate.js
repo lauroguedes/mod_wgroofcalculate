@@ -38,12 +38,12 @@ var wgModRequestAjax = (function ($) {
                     beforeSend: startPreloading(wgidcont)
                 }).done(function(data){
                     endPreloading(wgidcont);
+                    var data = JSON.parse(data);
                     if (data.response == 0){
                         $(wgidcont+".wg-roof-response").html('<p class="error">'+data.msn+'</p>');
                     }else if(data.response == 1){
                         $(wgidcont+".wg-roof-response").html('<p class="error">'+data.msn+'</p>');
                     }else{
-                        var response = JSON.parse(data);
                         $(wgidcont+".wg-roof-response").html('<p class="success">'+data.msn+'</p>');
                         $(wgidcont+".wg-roof-input").val("");
                     }

@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc4eaff4-9759-4da2-8541-57e1361211e9" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/language/en-GB/en-GB.mod_wgroofcalculate.sys.ini" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/language/pt-BR/pt-BR.mod_wgroofcalculate.sys.ini" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper.php" afterPath="$PROJECT_DIR$/helper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/language/en-GB/en-GB.mod_wgroofcalculate.ini" afterPath="$PROJECT_DIR$/language/en-GB/en-GB.mod_wgroofcalculate.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/language/pt-BR/pt-BR.mod_wgroofcalculate.ini" afterPath="$PROJECT_DIR$/language/pt-BR/pt-BR.mod_wgroofcalculate.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mod_wgroofcalculate.xml" afterPath="$PROJECT_DIR$/mod_wgroofcalculate.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmpl/assets/js/wgroofcalculate.js" afterPath="$PROJECT_DIR$/tmpl/assets/js/wgroofcalculate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmpl/default.php" afterPath="$PROJECT_DIR$/tmpl/default.php" />
     </list>
     <ignored path="mod_wgroofcalculate.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,21 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mod_wgroofcalculate.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mod_wgroofcalculate.xml">
+      <file leaf-file-name="wgroofcalculate.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tmpl/assets/js/wgroofcalculate.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3500698">
-              <caret line="44" column="80" selection-start-line="44" selection-start-column="80" selection-end-line="44" selection-end-column="80" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pt-BR.mod_wgroofcalculate.ini" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/language/pt-BR/pt-BR.mod_wgroofcalculate.ini">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="37" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.5588235">
+              <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -65,12 +47,12 @@
         <option value="$PROJECT_DIR$/mod_wgroofcalculate.php" />
         <option value="$PROJECT_DIR$/tmpl/assets/css/wgroofcalculate.css" />
         <option value="$PROJECT_DIR$/language/pt-BR/pt-BR.mod_wgroofcalculate.sys.ini" />
-        <option value="$PROJECT_DIR$/tmpl/assets/js/wgroofcalculate.js" />
         <option value="$PROJECT_DIR$/helper.php" />
         <option value="$PROJECT_DIR$/tmpl/default.php" />
         <option value="$PROJECT_DIR$/language/en-GB/en-GB.mod_wgroofcalculate.ini" />
         <option value="$PROJECT_DIR$/language/pt-BR/pt-BR.mod_wgroofcalculate.ini" />
         <option value="$PROJECT_DIR$/mod_wgroofcalculate.xml" />
+        <option value="$PROJECT_DIR$/tmpl/assets/js/wgroofcalculate.js" />
       </list>
     </option>
   </component>
@@ -295,7 +277,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="886" extended-state="7" />
+    <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1701389" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -532,14 +514,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tmpl/assets/js/wgroofcalculate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="100" selection-start-line="46" selection-start-column="100" selection-end-line="46" selection-end-column="100" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/helper.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.548387">
@@ -564,18 +538,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mod_wgroofcalculate.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3500698">
+          <caret line="44" column="80" selection-start-line="44" selection-start-column="80" selection-end-line="44" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/language/pt-BR/pt-BR.mod_wgroofcalculate.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.32352942">
           <caret line="16" column="37" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mod_wgroofcalculate.xml">
+    <entry file="file://$PROJECT_DIR$/tmpl/assets/js/wgroofcalculate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3500698">
-          <caret line="44" column="80" selection-start-line="44" selection-start-column="80" selection-end-line="44" selection-end-column="80" />
+        <state vertical-scroll-proportion="0.5588235">
+          <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
           <folding />
         </state>
       </provider>
