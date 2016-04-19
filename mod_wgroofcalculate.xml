@@ -20,8 +20,7 @@
                     <li>E muito mais...</li>
                 </ul>
                 <p>Desenvolvido por Lauro W. Guedes</p>
-                <p>GitHub: <a target="_blank" href="https://github.com/lauroguedes/">@lauroguedes</a></p>
-                <p>leo-ti@hotmail.com / leowgweb@gmail.com <br/><a href="http://leowgweb.com.br">www.leowgweb.com.br</a><br/></p>
+                <p>leo-ti@hotmail.com / leowgweb@gmail.com | <a href="http://leowgweb.com">www.leowgweb.com</a> | GitHup: <a href="https://github.com/lauroguedes">@lauroguedes</a> | Twitter: <a href="http://twitter.com/leowg">@leowg</a> | Youtube: <a href="https://www.youtube.com/channel/UCpcZSVLJlSR9d7uu5Muzd_Q?sub_confirmation=1">Canal leowgweb</a></p>
         ]]>
     </description>
     
@@ -108,8 +107,7 @@
     
     
     <updateservers>
-        <!--<server type="collection">http://example.com/list.xml</server>-->
-        <server type="extension" priority="1" name="Asikart Example Module">http://update.asikart.com/module/mod_example.xml</server>
+        <server type="extension" priority="1" name="WG Roof Calculate">http://leowgweb.com/w/moduleupdates/mod_wgroofcalculate.xml</server>
     </updateservers>
     
     
