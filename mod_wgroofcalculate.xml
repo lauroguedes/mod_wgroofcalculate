@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" version="2.5" client="site" method="upgrade">
+<extension type="module" version="1.0.0" client="site" method="upgrade">
     <name>WG Roof Calculate</name>
     <author>Lauro Guedes</author>
     <creationDate>2016-02-03</creationDate>
@@ -7,11 +7,11 @@
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
     <authorEmail>leowgweb@gmail.com</authorEmail>
     <authorUrl>http://leowgweb.com</authorUrl>
-    <version>1.0</version>
+    <version>1.0.0</version>
     <description>
         <![CDATA[
                 <p>Módulo que faz o cálculo aproximado de telhas e seu peso total baseado na área, fator de correção e tipo/modelo da telha.</p>
-                <p>Versão <strong>1.0</strong></p>
+                <p>Versão <strong>1.0.0</strong></p>
                 <p><strong>Implementações</strong></p>
                 <ul>
                     <li>Cadastro dos tipos de telha</li>
