@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.0.0" client="site" method="upgrade">
+    <name>WG Roof Calculate</name>
+    <author>Lauro Guedes</author>
+    <creationDate>2016-02-03</creationDate>
+    <copyright>Copyright (C) 2016 - Leowgweb</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>leowgweb@gmail.com</authorEmail>
+    <authorUrl>http://leowgweb.com</authorUrl>
+    <version>1.0.0</version>
+    <description>
+        <![CDATA[
+                <p>Módulo que faz o cálculo aproximado de telhas e seu peso total baseado na área, fator de correção e tipo/modelo da telha.</p>
+                <p>Versão <strong>1.0.0</strong></p>
+                <p><strong>Implementações</strong></p>
+                <ul>
+                    <li>Cadastro dos tipos de telha</li>
+                    <li>2 tipos de layout</li>
+                    <li>5 Tipos de alinhamento horizontal</li>
+                    <li>E muito mais...</li>
+                </ul>
+                <p>Desenvolvido por Lauro W. Guedes</p>
+                <p>leo-ti@hotmail.com / leowgweb@gmail.com | <a href="http://leowgweb.com">www.leowgweb.com</a> | GitHup: <a href="https://github.com/lauroguedes">@lauroguedes</a> | Twitter: <a href="http://twitter.com/leowg">@leowg</a> | Youtube: <a href="https://www.youtube.com/channel/UCpcZSVLJlSR9d7uu5Muzd_Q?sub_confirmation=1">Canal leowgweb</a></p>
+        ]]>
+    </description>
+    
+    <files>
+        <filename module="mod_wgroofcalculate">mod_wgroofcalculate.php</filename>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+        <filename>index.html</filename>
+        <filename>mod_wgroofcalculate.xml</filename>
+        <filename>helper.php</filename>
+    </files>
+    
+    
+    <help key="JHELP_EXTENSIONS_MODULE_MANAGER_FOOTER" />
+    
+    
+    <config>
+        
+        <fields name="params">
+            
+            <fieldset name="config" label="MOD_WGROOFCALCULATE_MODULE_TAB_CONFIG">
+
+                <field
+                    name="typesofroof"
+                    type="textarea"
+                    default=""
+                    label="MOD_WGROOFCALCULATE_MODULE_LABEL_TYPEROOF"
+                    description="MOD_WGROOFCALCULATE_MODULE_DESC_TYPEROOF"
+                    rows="10"
+                    cols="5"
+                />
+
+                <field
+                    name="increase"
+                    type="text"
+                    default="10"
+                    label="MOD_WGROOFCALCULATE_MODULE_LABEL_INCREASE"
+                    description="MOD_WGROOFCALCULATE_MODULE_DESC_INCREASE"
+                    size="10"
+                />
+                
+            </fieldset>
+
+            <fieldset name="layout" label="MOD_WGROOFCALCULATE_MODULE_TAB_LAYOUT">
+                <field
+                        name="formsize"
+                        type="text"
+                        default="100"
+                        label="MOD_WGROOFCALCULATE_MODULE_LABEL_FORMSIZE"
+                        description="MOD_WGROOFCALCULATE_MODULE_DESC_FORMSIZE"
+                />
+                <field name="formalign" type="list" default="left" label="MOD_WGROOFCALCULATE_MODULE_LABEL_FORMALIGN" description="MOD_WGROOFCALCULATE_MODULE_DESC_FORMALIGN">
+                    <option value="left">MOD_WGROOFCALCULATE_MODULE_SELECT_LEFT</option>
+                    <option value="center">MOD_WGROOFCALCULATE_MODULE_SELECT_CENTER</option>
+                    <option value="right">MOD_WGROOFCALCULATE_MODULE_SELECT_RIGHT</option>
+                </field>
+                <field name="fieldalign" type="list" default="left" label="MOD_WGROOFCALCULATE_MODULE_LABEL_FIELDALIGN" description="MOD_WGROOFCALCULATE_MODULE_DESC_FIELDALIGN">
+                    <option value="left">MOD_WGROOFCALCULATE_MODULE_SELECT_LEFT</option>
+                    <option value="center">MOD_WGROOFCALCULATE_MODULE_SELECT_CENTER</option>
+                    <option value="right">MOD_WGROOFCALCULATE_MODULE_SELECT_RIGHT</option>
+                    <option value="between">MOD_WGROOFCALCULATE_MODULE_SELECT_FIELDALIGN_CENTERSPACE</option>
+                    <option value="around">MOD_WGROOFCALCULATE_MODULE_SELECT_FIELDALIGN_CENTERCOMPACT</option>
+                </field>
+                <field name="fieldposition" type="list" default="vertical" label="MOD_WGROOFCALCULATE_MODULE_LABEL_FIELDPOSITION" description="MOD_WGROOFCALCULATE_MODULE_DESC_FIELDPOSITION">
+                    <option value="vertical">MOD_WGROOFCALCULATE_MODULE_SELECT_FIELDPOSITION_V</option>
+                    <option value="horizontal">MOD_WGROOFCALCULATE_MODULE_SELECT_FIELDPOSITION_H</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="advanced" label="MOD_WGROOFCALCULATE_MODULE_TAB_ADVANCED">
+
+                <field
+                        name="moduleclass_sfx"
+                        type="text"
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+                />
+
+            </fieldset>
+            
+        </fields>
+        
+    </config>
+    
+    
+    <updateservers>
+        <server type="extension" priority="1" name="WG Roof Calculate">http://leowgweb.com/w/moduleupdates/mod_wgroofcalculate.xml</server>
+    </updateservers>
+    
+    
+</extension>
